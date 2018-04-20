@@ -37,6 +37,7 @@ package com.toy.anagrams.lib;
 final class StaticWordLibrary extends WordLibrary {
 
     private static final String[] WORD_LIST = {
+   		"grape",
         "abstraction",
         "ambiguous",
         "arithmetic",
@@ -84,53 +85,73 @@ final class StaticWordLibrary extends WordLibrary {
         "traditional"};
 
     private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartcoin",
-        "maibuguos",
-        "ratimhteci",
-        "abkclssha",
-        "ibmtpa",
-        "iccrmutsnaec",
-        "ocbmnitaoni",
-        "ocsnqeeutnyl",
-        "ocsnroitmu",
-        "edrcmeneitgn",
-        "edepdnneyc",
-        "idasbmgiauet",
-        "ydanicm",
-        "neacsplutaoni",
-        "qeiuaveltn",
-        "xerpseisno",
-        "aficilatet",
-        "rfgaemtn",
-        "ehaxedicalm",
-        "milpmeneatitno",
-        "niidtsniugsiahleb",
-        "niehiratcen",
-        "nietnret",
-        "ajav",
-        "olacilazitno",
-        "imrcpoorecssro",
-        "anivagitno",
-        "poitimazitno",
-        "aparemert",
-        "aprtcki",
-        "ipkcel",
-        "opylomprich",
-        "irogorsuyl",
-        "isumtlnaoesuyl",
-        "psceficitaoni",
-        "tsurtcreu",
-        "elixalc",
-        "ilekiwse",
-        "amanegemtn",
-        "aminupalet",
-        "amhtmetacsi",
-        "ohjtvaa",
-        "evtrxe",
-        "nuisngde",
-        "rtdatioialn"
-    };
-    
+    		"apegr",
+    	       "batsartcoin",
+    	       "maibuguos",
+    	       "ratimhteci",
+    	       "abkclssha",
+    	       "ibmtpa",
+    	       "iccrmutsnaec",
+    	       "ocbmnitaoni",
+    	       "ocsnqeeutnyl",
+
+    	       "ocsnroitmu",
+
+    	       "edrcmeneitgn",
+
+    	       "edepdnneyc",
+
+    	       "idasbmgiauet",
+
+    	       "ydanicm",
+
+    	       "neacsplutaoni",
+
+    	       "qeiuaveltn",
+
+    	       "xerpseisno",
+
+    	       "aficilatet",
+
+    	       "rfgaemtn",
+
+    	       "ehaxedicalm",
+
+    	       "milpmeneatitno",
+
+    	       "niidtsniugsiahleb",
+
+    	       "niehiratcen",
+
+    	       "nietnret",
+
+    	       "ajav",
+    	       "olacilazitno",
+    	       "imrcpoorecssro",
+    	       "anivagitno",
+    	       "poitimazitno",
+    	       "aparemert",
+    	       "aprtcki",
+    	       "ipkcel",
+    	       "opylomprich",
+    	       "irogorsuyl",
+    	       "isumtlnaoesuyl",
+    	       "psceficitaoni",
+    	       "tsurtcreu",
+    	       "elixalc",
+    	       "ilekiwse",
+    	       "amanegemtn",
+    	       "aminupalet",
+    	       "amhtmetacsi",
+    	       "ohjtvaa",
+
+    	       "evtrxe",
+
+    	       "nuisngde",
+
+    	       "rtdatioialn"
+
+    	   };
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
     /**
