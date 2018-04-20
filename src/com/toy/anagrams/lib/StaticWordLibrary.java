@@ -41,6 +41,7 @@ import java.util.List;
 final class StaticWordLibrary extends WordLibrary {
 
     private static final String[] WORD_LIST = {
+   		"grape",
         "abstraction",
         "ambiguous",
         "arithmetic",
@@ -86,6 +87,7 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional"};
+
 
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
