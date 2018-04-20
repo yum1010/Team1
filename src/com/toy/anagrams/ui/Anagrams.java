@@ -118,7 +118,6 @@ public class Anagrams extends JFrame {
         fileMenu = new javax.swing.JMenu();
         aboutMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
-
         setTitle("クイズ");//ここを変える
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -223,7 +222,6 @@ public class Anagrams extends JFrame {
 
         fileMenu.setMnemonic('F');
         fileMenu.setText("いちごとぶどう: yumi mika");//ここを変える
-
         aboutMenuItem.setMnemonic('A');
         aboutMenuItem.setText("About");
         aboutMenuItem.setToolTipText("About");
@@ -257,7 +255,23 @@ public class Anagrams extends JFrame {
         wordIdx = (wordIdx + 1) % wordLibrary.getSize();
 
         feedbackLabel.setText(" ");
-        scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
+        int index=selectLevel.getSelectedIndex();
+        System.out.println(index);
+        if(index==0) {
+        	 scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
+        }
+        else if(index==1) {
+        	String a=wordLibrary.getScrambledWord(wordIdx);
+        	String b=wordLibrary.getShuffle(a);
+        	scrambledWord.setText(b);
+        	System.out.println("レベル2");
+        }
+        else {
+        	String a=wordLibrary.getScrambledWord(wordIdx);
+        	String b=wordLibrary.getShuffle(a);
+        	scrambledWord.setText(wordLibrary.getShuffle(b));
+        	System.out.println("レベル3");
+        }
         guessedWord.setText("");
         getRootPane().setDefaultButton(guessButton);
 
@@ -267,9 +281,8 @@ public class Anagrams extends JFrame {
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
-
     private void guessedWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guessedWordActionPerformed
-        if (wordLibrary.isCorrect(wordIdx, guessedWord.getText())){
+    	if (wordLibrary.isCorrect(wordIdx, guessedWord.getText())){
             feedbackLabel.setText("正解です！新しい言葉に挑戦しよう!");
             getRootPane().setDefaultButton(nextTrial);
         } else {
