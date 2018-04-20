@@ -119,7 +119,7 @@ public class Anagrams extends JFrame {
         aboutMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
 
-        setTitle("AnagramsAnagrams");//ここを変える
+        setTitle("クイズ");//ここを変える
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 exitForm(evt);
@@ -165,7 +165,7 @@ public class Anagrams extends JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
         mainPanel.add(guessedWord, gridBagConstraints);
 
-        feedbackLabel.setText("aaaaaaaaaaaaaa");
+        feedbackLabel.setText("aaaaaaaaaaaaaa");//ここを変える
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -222,7 +222,7 @@ public class Anagrams extends JFrame {
         getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
 
         fileMenu.setMnemonic('F');
-        fileMenu.setText("File");
+        fileMenu.setText("File");//ここを変える
 
         aboutMenuItem.setMnemonic('A');
         aboutMenuItem.setText("About");
