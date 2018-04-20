@@ -88,7 +88,6 @@ final class StaticWordLibrary extends WordLibrary {
         "unsigned",
         "traditional"};
 
-
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
     /**
@@ -113,7 +112,7 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
-        return scramble(idx);
+    	return scramble(idx);
     }
     public String scramble(int idx) {
     	String str=getWord(idx);
@@ -131,8 +130,22 @@ final class StaticWordLibrary extends WordLibrary {
     		
     	}
     	return answer;
-    	
-    	
+    	   	
+    }
+    public String getShuffle(String str) {
+    	String[] strArray = new String[str.length()];
+    	for (int i = 0; i < str.length(); i++) {
+    	    String str2 = String.valueOf(str.charAt(i));
+    	    strArray[i] = str2;
+    	}
+    	List<String> list=Arrays.asList(strArray);
+    	Collections.shuffle(list);
+    	String[] array2 =(String[])list.toArray(new String[list.size()]);
+        String answer="";
+    	for(int i=0;i<array2.length;i++) {
+    		answer+=array2[i];	
+    	}
+    	return answer;
     }
 
     /**
