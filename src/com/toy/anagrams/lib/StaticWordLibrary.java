@@ -31,6 +31,10 @@
 
 package com.toy.anagrams.lib;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Implementation of the logic for the Anagram Game application.
  */
@@ -83,54 +87,6 @@ final class StaticWordLibrary extends WordLibrary {
         "unsigned",
         "traditional"};
 
-    private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartcoin",
-        "maibuguos",
-        "ratimhteci",
-        "abkclssha",
-        "ibmtpa",
-        "iccrmutsnaec",
-        "ocbmnitaoni",
-        "ocsnqeeutnyl",
-        "ocsnroitmu",
-        "edrcmeneitgn",
-        "edepdnneyc",
-        "idasbmgiauet",
-        "ydanicm",
-        "neacsplutaoni",
-        "qeiuaveltn",
-        "xerpseisno",
-        "aficilatet",
-        "rfgaemtn",
-        "ehaxedicalm",
-        "milpmeneatitno",
-        "niidtsniugsiahleb",
-        "niehiratcen",
-        "nietnret",
-        "ajav",
-        "olacilazitno",
-        "imrcpoorecssro",
-        "anivagitno",
-        "poitimazitno",
-        "aparemert",
-        "aprtcki",
-        "ipkcel",
-        "opylomprich",
-        "irogorsuyl",
-        "isumtlnaoesuyl",
-        "psceficitaoni",
-        "tsurtcreu",
-        "elixalc",
-        "ilekiwse",
-        "amanegemtn",
-        "aminupalet",
-        "amhtmetacsi",
-        "ohjtvaa",
-        "evtrxe",
-        "nuisngde",
-        "rtdatioialn"
-    };
-    
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
     /**
@@ -147,6 +103,7 @@ final class StaticWordLibrary extends WordLibrary {
     public String getWord(int idx) {
         return WORD_LIST[idx];
     }
+    
 
     /**
      * Gets the word at a given index in its scrambled form.
@@ -154,7 +111,26 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
-        return SCRAMBLED_WORD_LIST[idx];
+        return scramble(idx);
+    }
+    public String scramble(int idx) {
+    	String str=getWord(idx);
+    	String[] strArray = new String[str.length()];
+    	for (int i = 0; i < str.length(); i++) {
+    	    String str2 = String.valueOf(str.charAt(i));
+    	    strArray[i] = str2;
+    	}
+    	List<String> list=Arrays.asList(strArray);
+    	Collections.shuffle(list);
+    	String[] array2 =(String[])list.toArray(new String[list.size()]);
+        String answer="";
+    	for(int i=0;i<array2.length;i++) {
+    		answer+=array2[i];
+    		
+    	}
+    	return answer;
+    	
+    	
     }
 
     /**
